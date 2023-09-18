@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { CustomeButton } from "./CustomeButton";
+import { CustomButton } from "./CustomButton";
 
 export const Hero = () => {
   const handleScroll = () => {};
@@ -18,9 +18,9 @@ export const Hero = () => {
           process.
         </p>
 
-        <CustomeButton
+        <CustomButton
           title="Explore Cars"
-          containerStyles="bg-primary-blue text-white rounded-full mt-10"
+          containerStyles="bg-emerald-400 text-white rounded-full mt-10"
           handleClick={handleScroll}
         />
       </div>

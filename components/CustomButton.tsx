@@ -3,7 +3,7 @@
 import { CustomButtonProps } from "@/types";
 import React from "react";
 
-export const CustomeButton = ({
+export const CustomButton = ({
   title,
   containerStyles,
   handleClick,
@@ -12,10 +12,10 @@ export const CustomeButton = ({
     <button
       disabled={false}
       type={"button"}
-      className={`custom-btn`}
-      onClick={() => {}}
+      className={`custom-btn ${containerStyles}`}
+      onClick={() => handleClick}
     >
-      <span className={`flex-1`}>title</span>
+      <span className="flex-1">{title}</span>
     </button>
   );
 };
