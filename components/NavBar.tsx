@@ -22,7 +22,7 @@ export const NavBar = () => {
 
         <CustomButton
           title="Sign In"
-          containerStyles="text-emerald-400 rounded-full bg-white min-w-[130px]"
+          containerStyles="text-emerald-400 rounded-full bg-white min-w-[130px]  sm:border border-emerald-400 xl:hover:bg-black xl:hover:border-none sm:hover:bg-emerald-400 sm:hover:text-white"
           btnType="button"
         />
       </nav>
