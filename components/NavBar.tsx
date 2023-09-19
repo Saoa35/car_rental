@@ -4,6 +4,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { CustomButton } from "./CustomButton";
 
 export const NavBar = () => {
   return (
@@ -14,10 +15,16 @@ export const NavBar = () => {
             src="/logo.svg"
             alt="Logo"
             className="object-contain"
-            width={118}
-            height={18}
+            width={150}
+            height={50}
           />
         </Link>
+
+        <CustomButton
+          title="Sign In"
+          containerStyles="text-emerald-400 rounded-full bg-white min-w-[130px]"
+          btnType="button"
+        />
       </nav>
     </header>
   );
