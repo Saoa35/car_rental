@@ -3,6 +3,7 @@
 import { CarProps } from "@/types";
 import React, { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import Image from "next/image";
 
 interface CarDetailsProps {
   isOpen: boolean;
@@ -27,7 +28,31 @@ export const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
             <div className="fixed inset-0 bg-black bg-opacity-25" />
           </Transition.Child>
 
-          <div className="fixed inset-0 overflow-y-auto"></div>
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4 text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel>
+                  <button type="button" onClick={closeModal}>
+                    <Image
+                      src="/close.svg"
+                      width={20}
+                      height={20}
+                      className="object-contain"
+                      alt="Close"
+                    />
+                  </button>
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
         </Dialog>
       </Transition>
     </>
