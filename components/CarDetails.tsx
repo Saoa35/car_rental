@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import { CarProps } from "@/types";
 import React, { Fragment } from "react";
@@ -26,6 +26,8 @@ export const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
           >
             <div className="fixed inset-0 bg-black bg-opacity-25" />
           </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto"></div>
         </Dialog>
       </Transition>
     </>
