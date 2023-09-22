@@ -3,6 +3,10 @@
 import React, { useState } from "react";
 import { SearchManufacturer } from "./SearchManufacturer";
 
+const SearchButton = ({ otherClasses }) => (
+  <button type="submit" className={`-ml-3 z-10 ${otherClasses}`}></button>
+);
+
 export const SearchBar = () => {
   const [manufacturer, setManufacturer] = useState("");
 
