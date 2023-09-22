@@ -39,11 +39,11 @@ export const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto transform rounded-2xl bg-white text-left shadow-xl transition-all flex flex-col gap-5">
+                <Dialog.Panel className="relative w-full p-6 max-w-lg  overflow-y-auto transform rounded-2xl bg-white text-left shadow-xl transition-all flex flex-col gap-5">
                   <button
                     type="button"
                     onClick={closeModal}
-                    className="absolute top-2 right-2 z-10 w-fit p-2 bg-blue-100 rounded-full"
+                    className="absolute top-2 right-2 z-10 w-fit p-2 bg-slate-100 rounded-full"
                   >
                     <Image
                       src="/close.svg"
@@ -66,7 +66,7 @@ export const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                     </div>
 
                     <div className="flex gap-3">
-                      <div className="flex-1 relative w-full h-24 bg-blue-100 rounded-lg">
+                      <div className="flex-1 relative w-full h-24 bg-cyan-100 rounded-lg">
                         <Image
                           src="/hero.png"
                           alt="car model"
@@ -75,7 +75,7 @@ export const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                           className="object-contain"
                         />
                       </div>
-                      <div className="flex-1 relative w-full h-24 bg-blue-100 rounded-lg">
+                      <div className="flex-1 relative w-full h-24 bg-cyan-100 rounded-lg">
                         <Image
                           src="/hero.png"
                           alt="car model"
@@ -84,7 +84,7 @@ export const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                           className="object-contain"
                         />
                       </div>
-                      <div className="flex-1 relative w-full h-24 bg-blue-100 rounded-lg">
+                      <div className="flex-1 relative w-full h-24 bg-cyan-100 rounded-lg">
                         <Image
                           src="/hero.png"
                           alt="car model"
@@ -107,8 +107,12 @@ export const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                           className="flex justify-between gap-5 w-full text-right"
                           key={key}
                         >
-                          <h4>{key}</h4>
-                          <p>{value}</p>
+                          <h4 className="text-grey capitalize">
+                            {key.split("_").join(" ")}
+                          </h4>
+                          <p className="text-black-100 font-semibold">
+                            {value}
+                          </p>
                         </div>
                       ))}
                     </div>
