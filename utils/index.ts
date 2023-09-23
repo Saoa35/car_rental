@@ -1,4 +1,4 @@
-import { CarProps } from "@/types";
+import { CarProps, FilterProps } from "@/types";
 
 export const fetchCars = async (filters: FilterProps) => {
   const headers = {
