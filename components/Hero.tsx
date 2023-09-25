@@ -21,7 +21,7 @@ export const Hero = () => {
 
         <CustomButton
           title="Explore Cars"
-          containerStyles="bg-emerald-400 text-white rounded-full mt-10 border hover:text-emerald-400 hover:bg-white  hover: hover:border-emerald-400"
+          containerStyles="bg-emerald-400 text-white rounded-full mt-10 border hover:text-emerald-400 hover:bg-white hover:border-emerald-400"
           handleClick={handleScroll}
         />
       </div>
