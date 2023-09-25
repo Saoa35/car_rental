@@ -4,11 +4,18 @@ import { CustomFilterProps } from "@/types";
 import Image from "next/image";
 import React, { useState, Fragment } from "react";
 import { Listbox, Transition } from "@headlessui/react";
+import { useRouter } from "next/navigation";
 
 export const CustomFilter = ({ title, options }: CustomFilterProps) => {
   const [selected, setSelected] = useState(options[0]);
 
-  const handleUpdateParams = () => {};
+  const router = useRouter();
+
+  const handleUpdateParams = () => {
+    const newPathName = "";
+
+    router.push(newPathName);
+  };
 
   return (
     <div className=" w-fit">
