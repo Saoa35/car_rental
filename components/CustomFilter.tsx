@@ -5,21 +5,28 @@ import Image from "next/image";
 import React, { useState, Fragment } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { useRouter } from "next/navigation";
+import { updateSearchParams } from "@/utils";
 
 export const CustomFilter = ({ title, options }: CustomFilterProps) => {
   const [selected, setSelected] = useState(options[0]);
 
   const router = useRouter();
 
-  const handleUpdateParams = () => {
-    const newPathName = "";
+  const handleUpdateParams = (e: { type: string; value: string }) => {
+    const newPathName = updateSearchParams(title, e.value.toLowerCase());
 
     router.push(newPathName);
   };
 
   return (
     <div className=" w-fit">
-      <Listbox value={selected} onChange={(e) => setSelected(e)}>
+      <Listbox
+        value={selected}
+        onChange={(e) => {
+          setSelected(e);
+          handleUpdateParams(e);
+        }}
+      >
         <div className=" relative w-fit z-10">
           <Listbox.Button className="custom-filter__btn">
             <span className=" block truncate">{selected.title}</span>
